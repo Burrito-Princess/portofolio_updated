@@ -128,28 +128,28 @@ function reDrawPlayer() {
 document.addEventListener("keydown", function (event) {
   if (clicked == false) {
     clicked = true;
-    if (event.keyCode == 37) {
+    if (event.keyCode == 37 || event.keyCode == 65) {
       if (direc != "right") {
         direc = "left";
         if (p_x < 0) {
           p_x = g_size * p_size - p_size;
         }
       }
-    } else if (event.keyCode == 38) {
+    } else if (event.keyCode == 38 || event.keyCode == 87) {
       if (direc != "down") {
         direc = "up";
         if (p_y < 0) {
           p_y = g_size * p_size - p_size;
         }
       }
-    } else if (event.keyCode == 39) {
+    } else if (event.keyCode == 39 || event.keyCode == 68) {
       if (direc != "left") {
         direc = "right";
         if (p_x > g_size * p_size - p_size) {
           p_x = 0;
         }
       }
-    } else if (event.keyCode == 40) {
+    } else if (event.keyCode == 40 || event.keyCode == 83) {
       if (direc != "up") {
         direc = "down";
         if (p_y > g_size * p_size - p_size) {
